@@ -10,8 +10,6 @@ end)
 vim.keymap.set("n", "<leader>hp", function()
 	ui.nav_prev()
 end)
-vim.keymap.set("n", "<leader>hn", mark.add_file)
-
 vim.keymap.set("n", "<C-h>", function()
 	ui.nav_file(1)
 end)

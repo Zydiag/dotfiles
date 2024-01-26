@@ -78,12 +78,24 @@ return require("packer").startup(function(use)
 	})
 	use("folke/which-key.nvim")
 	use("akinsho/toggleterm.nvim")
-	use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-}
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
+	use({
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	})
+	use("Aasim-A/scrollEOF.nvim")
+
+	use("windwp/nvim-ts-autotag")
+	use("norcalli/nvim-colorizer.lua")
 end)
