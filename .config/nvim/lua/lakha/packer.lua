@@ -13,13 +13,6 @@ return require("packer").startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
-		config = function()
-			vim.cmd("colorscheme rose-pine")
-		end,
-	})
-	use({
 		"folke/trouble.nvim",
 		config = function()
 			require("trouble").setup({
@@ -43,9 +36,10 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context")
+	use({ "rafamadriz/friendly-snippets" })
 	use({
 		"VonHeikemen/lsp-zero.nvim",
-		branch = "v1.x",
+		branch = "v3.x",
 		requires = {
 			-- LSP Support
 			{ "neovim/nvim-lspconfig" },
@@ -95,7 +89,25 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("Aasim-A/scrollEOF.nvim")
-
+	-- use({ "catppuccin/nvim", as = "catppuccin" })
+	use({
+		"loctvl842/monokai-pro.nvim",
+		config = function()
+			require("monokai-pro").setup()
+		end,
+	})
 	use("windwp/nvim-ts-autotag")
-	use("norcalli/nvim-colorizer.lua")
+	use("lukas-reineke/indent-blankline.nvim")
+	use("nvim-tree/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+	use("NvChad/nvim-colorizer.lua")
+	use({
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		-- optionally, override the default options:
+		config = function()
+			require("tailwindcss-colorizer-cmp").setup({
+				color_square_width = 2,
+			})
+		end,
+	})
 end)

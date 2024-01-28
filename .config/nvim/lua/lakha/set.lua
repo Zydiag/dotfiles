@@ -9,7 +9,11 @@ vim.opt.shiftwidth = 2
 
 vim.opt.smartindent = true
 
+vim.opt.wrap = true
+
+vim.opt.textwidth = 100
 vim.opt.wrap = false
+vim.opt.linebreak = true
 
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -28,3 +32,5 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "100"
+
+vim.o.pumheight = 10
