@@ -89,13 +89,13 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("Aasim-A/scrollEOF.nvim")
-	-- use({ "catppuccin/nvim", as = "catppuccin" })
-	use({
-		"loctvl842/monokai-pro.nvim",
-		config = function()
-			require("monokai-pro").setup()
-		end,
-	})
+	use({ "catppuccin/nvim", as = "catppuccin" })
+	-- use({
+	-- 	"loctvl842/monokai-pro.nvim",
+	-- 	config = function()
+	-- 		require("monokai-pro").setup()
+	-- 	end,
+	-- })
 	use("windwp/nvim-ts-autotag")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("nvim-tree/nvim-tree.lua")
@@ -110,4 +110,5 @@ return require("packer").startup(function(use)
 			})
 		end,
 	})
+	use("wakatime/vim-wakatime")
 end)
