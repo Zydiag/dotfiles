@@ -90,12 +90,12 @@ return require("packer").startup(function(use)
 	})
 	use("Aasim-A/scrollEOF.nvim")
 	use({ "catppuccin/nvim", as = "catppuccin" })
-	-- use({
-	-- 	"loctvl842/monokai-pro.nvim",
-	-- 	config = function()
-	-- 		require("monokai-pro").setup()
-	-- 	end,
-	-- })
+	use({
+		"loctvl842/monokai-pro.nvim",
+		config = function()
+			require("monokai-pro").setup()
+		end,
+	})
 	use("windwp/nvim-ts-autotag")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("nvim-tree/nvim-tree.lua")
@@ -111,4 +111,16 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("wakatime/vim-wakatime")
+	use("preservim/vim-pencil")
+	use("ThePrimeagen/vim-be-good")
+	use({
+		"epwalsh/obsidian.nvim",
+		tag = "*", -- recommended, use latest release instead of latest commit
+		requires = {
+			-- Required.
+			"nvim-lua/plenary.nvim",
+
+			-- see below for full list of optional dependencies 👇
+		},
+	})
 end)

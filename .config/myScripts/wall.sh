@@ -1,6 +1,6 @@
 #!/usr/bin/zsh
 
-wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg' -print | shuf -n 1)
+wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg'  | shuf -n 1)
 
 echo $wall
 
