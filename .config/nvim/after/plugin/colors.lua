@@ -20,7 +20,7 @@ require("catppuccin").setup({
 		conditionals = {},
 		loops = {},
 		functions = {},
-		keywords = { "bold" },
+		keywords = { "italic", "bold" },
 		strings = {},
 		variables = {},
 		numbers = {},

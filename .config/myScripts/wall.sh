@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/sh
 
 wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg'  | shuf -n 1)
 
