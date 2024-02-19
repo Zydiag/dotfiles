@@ -36,7 +36,6 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("nvim-treesitter/nvim-treesitter-context")
-	use({ "rafamadriz/friendly-snippets" })
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
@@ -103,7 +102,6 @@ return require("packer").startup(function(use)
 	use("NvChad/nvim-colorizer.lua")
 	use({
 		"roobert/tailwindcss-colorizer-cmp.nvim",
-		-- optionally, override the default options:
 		config = function()
 			require("tailwindcss-colorizer-cmp").setup({
 				color_square_width = 2,
@@ -112,22 +110,11 @@ return require("packer").startup(function(use)
 	})
 	use("wakatime/vim-wakatime")
 	use("preservim/vim-pencil")
-	use("ThePrimeagen/vim-be-good")
 	use({
 		"epwalsh/obsidian.nvim",
 		tag = "*", -- recommended, use latest release instead of latest commit
 		requires = {
-			-- Required.
 			"nvim-lua/plenary.nvim",
-
-			-- see below for full list of optional dependencies 👇
 		},
 	})
-	use({
-	"L3MON4D3/LuaSnip",
-	-- follow latest release.
-	tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-	-- install jsregexp (optional!:).
-	run = "make install_jsregexp"
-})
 end)

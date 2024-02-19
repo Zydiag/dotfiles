@@ -6,7 +6,7 @@ conform = require("conform").setup({
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd", "prettier" } },
 		typescript = { { "prettierd", "prettier" } },
-		html = { { "prettierd", "prettier" } },
+		-- html = { {"htmlbeautifi" } },
 		css = { { "prettierd", "prettier" } },
 		json = { { "prettierd", "prettier" } },
 		javascriptreact = { { "prettierd", "prettier" } },

@@ -65,6 +65,21 @@ local border = {
 	{ "╰", "CmpBorder" },
 	{ "│", "CmpBorder" },
 }
+vim.g.completion_items_priority = {
+  Field = 11,
+  Method = 10,
+  Property = 9,
+  Function = 7,
+  Variables = 6,
+  Struct = 6,
+  Interfaces = 6,
+  Constant = 6,
+  Class = 6,
+  Keyword = 5,
+  Treesitter = 4,
+  File = 2,
+  Buffers = 0,
+}
 
 cmp.setup({
 	-- preselect = "item",
@@ -81,8 +96,8 @@ cmp.setup({
 	-- }),
 	sources = {
 		{ name = "path" },
-		{ name = "luasnip", keyword_length = 2, priority="5" },
-		{ name = "nvim_lsp", priority="3" },
+		{ name = "luasnip", keyword_length = 2, priority="20" },
+		{ name = "nvim_lsp", priority="19" },
 		{ name = "nvim_lua" },
 		{ name = "buffer", keyword_length = 3 },
 	},
