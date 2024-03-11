@@ -9,7 +9,11 @@ import = [
 TERM = "xterm-256color"
 
 [font]
-size = 12.0
+size = 8.0
+
+[font.normal]
+family = "Cascadia Code"
+style = "Regular"
 
 [font.bold]
 family = "Cascadia Code"
@@ -23,9 +27,6 @@ style = "Bold Italic"
 family = "Cascadia Code"
 style = "Italic"
 
-[font.normal]
-family = "Cascadia Code"
-style = "Regular"
 
 [font.offset]
 x = 1
