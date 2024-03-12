@@ -41,11 +41,11 @@ $HOME/.config/polybar/launch.sh
 # ~/.config/bspwm/bspwmrc
 
 # Check if the flag file exists
-if [ ! -e "$HOME/.bspwm_startup_done" ]; then
-    # Run your startup command here
-    change_wall
-
-    # Create a flag file to indicate that the startup command has been executed
-    touch "$HOME/.bspwm_startup_done"
-fi
-
+# if [ ! -e "$HOME/.bspwm_startup_done" ]; then
+#     # Run your startup command here
+#     bash $HOME/.config/myScripts/wall.sh
+#
+#     # Create a flag file to indicate that the startup command has been executed
+#     touch "$HOME/.bspwm_startup_done"
+# fi
+#
