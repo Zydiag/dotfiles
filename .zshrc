@@ -117,6 +117,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="exa --icons"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+ alias tmux="tmux -u"
 
 
 # x=$(gsettings get org.gnome.desktop.background picture-uri | wc -c)
