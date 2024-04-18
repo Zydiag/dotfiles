@@ -117,8 +117,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="exa --icons"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
- alias tmux="tmux -u"
+alias tmux="tmux -u"
+alias vi="nvim"
 
+eval "$(fzf --zsh)"
 
 # x=$(gsettings get org.gnome.desktop.background picture-uri | wc -c)
 # y=$((x - 2))

@@ -1,18 +1,4 @@
 #!/bin/bash
-# while true
-# do
-#     # Set the path to the wallpaper
-#     export wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg' | shuf -n 1)
-#
-#     # Set the wallpaper using wal
-#     wal -q -i "$wall"
-#
-#     # Set the GNOME desktop background
-#     gsettings set org.gnome.desktop.background picture-uri "file://$wall"
-#
-#     # Wait for 10 minutes before changing the wallpaper again
-#     sleep 30
-# done
 LOCK_FILE="/tmp/wallpaper_change.lock"
 # Check if another instance is running
 if [ -e "$LOCK_FILE" ]; then
@@ -34,7 +20,7 @@ set_wallpaper() {
     export wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg' | shuf -n 1)
     # Set the wallpaper using wal
     wal -q -i "$wall"
-    sleep 600
+    sleep 3600
 }
 # Main loop
 while true
