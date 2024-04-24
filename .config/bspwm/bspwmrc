@@ -34,6 +34,10 @@ bspc config presel_feedback_color "$color1"
 #AutoStart
 setxkbmap -option ctrl:nocaps
 sxhkd &
+
 picom --config $HOME/.config/picom/picom.conf &
+# turn off automatic screen off after 10min
+xset -dpms &
+xset s off &
 
 $HOME/.config/polybar/launch.sh

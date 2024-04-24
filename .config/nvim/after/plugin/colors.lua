@@ -1,7 +1,7 @@
 require("catppuccin").setup({
 	flavour = "mocha", -- latte, frappe, macchiato, mocha
 	background = { -- :h background
-		light = "latte",
+		light = "mocha",
 		dark = "mocha",
 	},
 	transparent_background = true, -- disables setting the background color.
@@ -20,7 +20,7 @@ require("catppuccin").setup({
 		conditionals = {},
 		loops = {},
 		functions = {},
-		keywords = { "italic", "bold" },
+		keywords = { "bold", "italic" },
 		strings = {},
 		variables = {},
 		numbers = {},
@@ -29,7 +29,13 @@ require("catppuccin").setup({
 		types = {},
 		operators = {},
 	},
-	color_overrides = {},
+	color_overrides = {
+		mocha = {
+			base = "#000000",
+			mantle = "#000000",
+			crust = "#000000",
+		},
+	},
 	custom_highlights = {},
 	integrations = {
 		cmp = true,

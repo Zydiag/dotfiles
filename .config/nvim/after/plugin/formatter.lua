@@ -4,14 +4,14 @@ conform = require("conform").setup({
 		-- Conform will run multiple formatters sequentially
 		python = { "isort", "black" },
 		-- Use a sub-list to run only the first available formatter
-		javascript = { { "prettierd", "prettier" } },
-		typescript = { { "prettierd", "prettier" } },
+		javascript = { { "prettier", "prettierd" } },
+		typescript = { { "prettier", "prettierd" } },
 		-- html = { {"htmlbeautifi" } },
-		css = { { "prettierd", "prettier" } },
-		json = { { "prettierd", "prettier" } },
-		javascriptreact = { { "prettierd", "prettier" } },
-		typescriptreact = { { "prettierd", "prettier" } },
-		markdown = { { "prettierd", "prettier" } },
+		css = { { "prettier", "prettierd" } },
+		json = { { "prettier", "prettierd" } },
+		javascriptreact = { { "prettier", "prettierd" } },
+		typescriptreact = { { "prettier", "prettierd" } },
+		markdown = { { "prettier", "prettierd" } },
 	},
 	format_on_save = {
 		lsp_fallback = true,
