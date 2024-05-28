@@ -6,7 +6,7 @@ super + Escape
 
 # terminal emulator
 super + Return
-	alacritty
+	kitty
 
 # program launcher
 super + d
@@ -56,6 +56,9 @@ super + {t,shift + t,s,f}
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
+
+alt + shift + x
+    betterlockscreen -l dim
 
 #
 # focus/swap

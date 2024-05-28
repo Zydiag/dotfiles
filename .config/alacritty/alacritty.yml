@@ -1,0 +1,59 @@
+import:
+  # Uncomment the flavour you want below:
+  # - "~/.config/alacritty/catppuccin-latte.toml"
+  # - "~/.config/alacritty/catppuccin-frappe.toml"
+  # - "~/.config/alacritty/catppuccin-macchiato.toml"
+  # - "~/.config/alacritty/catppuccin-mocha.toml"
+
+colors:
+  primary:
+    background: '0x000000'
+    foreground: '0xffffff'
+
+  transparent_background_colors: true
+
+env:
+  TERM: xterm-256color
+
+font:
+  normal:
+    family: "Cascadia Code"
+    style: "Regular"
+  bold:
+    family: "Cascadia Code"
+    style: "Bold"
+  italic:
+    family: "Cascadia Code"
+    style: "Italic"
+  bold_italic:
+    family: "Cascadia Code"
+    style: "Bold Italic"
+  size: 8.0
+  offset:
+    x: 1
+    y: 1
+
+  # Enable font ligatures
+  features:
+    - calt
+    - ss01
+
+scrolling:
+  history: 5000
+
+window:
+  title: "Alacritty"
+  opacity: 0.9
+  padding:
+    x: 6
+    y: 6
+  class:
+    general: "Alacritty"
+    instance: "Alacritty"
+
+# Example configuration of keyboard shortcuts
+key_bindings:
+  - { key: V, mods: Control|Shift, action: Paste }
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: K, mods: Command, action: ClearHistory }
+

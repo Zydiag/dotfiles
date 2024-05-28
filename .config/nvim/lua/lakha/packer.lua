@@ -91,9 +91,6 @@ return require("packer").startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({
 		"loctvl842/monokai-pro.nvim",
-		config = function()
-			require("monokai-pro").setup()
-		end,
 	})
 	use("windwp/nvim-ts-autotag")
 	use("lukas-reineke/indent-blankline.nvim")
@@ -117,4 +114,10 @@ return require("packer").startup(function(use)
 			"nvim-lua/plenary.nvim",
 		},
 	})
+	use {
+  "ray-x/lsp_signature.nvim",
+}
+	use ('ellisonleao/carbon-now.nvim')
+	use (	"michaelrommel/nvim-silicon")
+	use ("MunifTanjim/nui.nvim")
 end)
