@@ -16,14 +16,14 @@ conform = require("conform").setup({
 	format_on_save = {
 		lsp_fallback = true,
 		async = false,
-		timeout_ms = 500,
+		timeout_ms = 200,
 	},
 })
 
-vim.keymap.set({ "n", "v" }, "<leader>fmf", function()
-	conform.format({
-		lsp_fallback = true,
-		async = false,
-		timeout_ms = 500,
-	})
-end)
+-- vim.keymap.set({ "n", "v" }, "<leader>fmf", function()
+-- 	conform.format({
+-- 		lsp_fallback = true,
+-- 		async = false,
+-- 		timeout_ms = 100,
+-- 	})
+-- end)

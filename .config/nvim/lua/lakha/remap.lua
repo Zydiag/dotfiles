@@ -55,3 +55,7 @@ end)
 
 vim.keymap.set("v", "<leader>ks", ":Silicon<CR>")
 
+vim.keymap.set("n", "<leader>cps", ":CompetiTest show_ui<CR>")
+vim.keymap.set("n", "<leader>cpr", ":CompetiTest run<CR>")
+vim.keymap.set("n", "<leader>cpa", ":CompetiTest add_testcase<CR>")
+vim.keymap.set("n", "<leader>cpb", ":CompetiTest receive problem<CR>")

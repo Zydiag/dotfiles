@@ -61,7 +61,6 @@ return require("packer").startup(function(use)
 	use("folke/zen-mode.nvim")
 	use("eandrju/cellular-automaton.nvim")
 	use("laytan/cloak.nvim")
-	use("prettier/vim-prettier")
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 	use({
 		"stevearc/conform.nvim",
@@ -120,4 +119,21 @@ return require("packer").startup(function(use)
 	use ('ellisonleao/carbon-now.nvim')
 	use (	"michaelrommel/nvim-silicon")
 	use ("MunifTanjim/nui.nvim")
+
+
+	use {
+	'xeluxee/competitest.nvim',
+	requires = 'MunifTanjim/nui.nvim',
+	config = function() require('competitest').setup() end
+}
+use {
+  'Exafunction/codeium.vim',
+  config = function ()
+    -- Change '<C-g>' here to any keycode you like.
+    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
+    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+  end
+}
 end)

@@ -120,7 +120,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias tmux="tmux -u"
 alias vi="nvim"
 
+neofetch
 eval "$(fzf --zsh)"
+
 
 # x=$(gsettings get org.gnome.desktop.background picture-uri | wc -c)
 # y=$((x - 2))
@@ -128,4 +130,8 @@ eval "$(fzf --zsh)"
 # wal -q -i $wall_length
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+export PATH=$PATH:/home/sahil/.spicetify

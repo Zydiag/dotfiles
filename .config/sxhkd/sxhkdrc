@@ -1,5 +1,11 @@
 #
 
+### --- polybar show/hide --- ###
+# super + space
+#     polybar-msg cmd show
+# hide bar on key release
+# @super + space
+#     polybar-msg cmd hide
 # sxhkd reload
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -7,6 +13,11 @@ super + Escape
 # terminal emulator
 super + Return
 	kitty
+
+super + shift + Return
+	bspc rule -a kitty -o state=floating follow=on center=true rectangle=490x310+0+0 && kitty
+super + shift + r
+	bspc rule -a kitty -o state=floating follow=on center=true rectangle=800x400+0+0 && kitty ranger
 
 # program launcher
 super + d
@@ -52,6 +63,9 @@ super + g
 # set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+super + space
+    bspc node -t "~"{floating,tiled}
 
 # set the node flags
 super + ctrl + {m,x,y,z}
@@ -120,6 +134,8 @@ super + ctrl + shift + space
 #
 # move/resize
 #
+alt + shift + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
@@ -129,6 +145,9 @@ super + alt + {h,j,k,l}
 # manage volume using brightnessctl
 XF86MonBrightness{Up,Down}
   brightnessctl set {+10%,10%-}
+
+XF86Audio{Next,Prev,Play,Stop}
+	mpc {next,prev,toggle,stop}
 
 # manage volume using amixer
 XF86Audio{Lower,Raise}Volume

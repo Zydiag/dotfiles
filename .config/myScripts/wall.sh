@@ -19,8 +19,11 @@ set_wallpaper() {
     # Set the path to the wallpaper
     export wall=$(find ~/Pictures/wall -name '*.png' -o -name '*.jpg' | shuf -n 1)
     # Set the wallpaper using wal
-    wal -q -i "$wall"
-    sleep 3600
+		echo $wall
+		# swww img "$wall" --transition-type center --transition-pos bottom-right
+		wal -q -i "$wall"
+		. "${HOME}/.cache/wal/colors.sh"
+		sleep 3600
 }
 # Main loop
 while true
