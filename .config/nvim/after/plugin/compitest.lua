@@ -16,6 +16,7 @@ require('competitest').setup { -- to customize settings
 		c = { exec = "gcc", args = { "-Wall", "$(FNAME)", "-o", "zz_run" } },
 		cpp = { exec = "g++", args = { "-Wall", "$(FNAME)", "-o", "zz_run" } },
 	},
+	maximum_time = 2000,
 	run_command = {
 		c = { exec = "./zz_run" },
 		cpp = { exec = "./zz_run" },

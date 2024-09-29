@@ -33,6 +33,9 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
+
+
+
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
@@ -59,3 +62,6 @@ vim.keymap.set("n", "<leader>cps", ":CompetiTest show_ui<CR>")
 vim.keymap.set("n", "<leader>cpr", ":CompetiTest run<CR>")
 vim.keymap.set("n", "<leader>cpa", ":CompetiTest add_testcase<CR>")
 vim.keymap.set("n", "<leader>cpb", ":CompetiTest receive problem<CR>")
+
+vim.api.nvim_set_keymap('n', ':', ':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })
+vim.api.nvim_set_keymap('n', '<leader><leader>', ':Telescope cmdline<CR>', { noremap = true, desc = "Cmdline" })

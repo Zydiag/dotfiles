@@ -22,7 +22,6 @@ super + shift + r
 # program launcher
 super + d
 	rofi -show drun
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -160,3 +159,14 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+	super + {_,shift + }g
+	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
+	    || bspc node 'last.local.!focused.!hidden.floating' -f \
+	    || bspc node  'any.local.!focused.!hidden.floating' -f
+# Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
+super + {_,shift + }c
+	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
