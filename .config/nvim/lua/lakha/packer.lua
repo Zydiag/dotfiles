@@ -152,7 +152,9 @@ use {
     opts = {
         -- configuration goes here
     },
-		use { 'jonarrien/telescope-cmdline.nvim' }
-
+		use { 'jonarrien/telescope-cmdline.nvim' },
+		use 'CRAG666/code_runner.nvim',
+		use('jose-elias-alvarez/null-ls.nvim'),
+		use('MunifTanjim/prettier.nvim')
 }
 end)

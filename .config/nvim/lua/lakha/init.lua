@@ -38,3 +38,9 @@ autocmd({"BufWritePre"}, {
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
+
+
+-- disable codeium by default in c++
+vim.g.codeium_filetypes = {
+		cpp = false,
+}
