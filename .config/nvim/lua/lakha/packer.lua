@@ -110,51 +110,65 @@ return require("packer").startup(function(use)
 		"epwalsh/obsidian.nvim",
 		tag = "*", -- recommended, use latest release instead of latest commit
 		requires = {
+			-- Required.
 			"nvim-lua/plenary.nvim",
-		},
+
+			-- see below for full list of optional dependencies 👇
+		}
 	})
 	use {
-  "ray-x/lsp_signature.nvim",
-}
-	use ('ellisonleao/carbon-now.nvim')
-	use (	"michaelrommel/nvim-silicon")
-	use ("MunifTanjim/nui.nvim")
+		"ray-x/lsp_signature.nvim",
+	}
+	use('ellisonleao/carbon-now.nvim')
+	use("michaelrommel/nvim-silicon")
+	use("MunifTanjim/nui.nvim")
 
 
 	use {
-	'xeluxee/competitest.nvim',
-	requires = 'MunifTanjim/nui.nvim',
-	config = function() require('competitest').setup() end
-}
-use {
-  'Exafunction/codeium.vim',
-  config = function ()
-    -- Change '<C-g>' here to any keycode you like.
-    vim.keymap.set('i', '<C-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-  end
-}
-	use{
-    "kawre/leetcode.nvim",
-    build = ":TSUpdate html",
-    dependencies = {
-        "nvim-telescope/telescope.nvim",
-        "nvim-lua/plenary.nvim", -- required by telescope
-        "MunifTanjim/nui.nvim",
+		'xeluxee/competitest.nvim',
+		requires = 'MunifTanjim/nui.nvim',
+		config = function() require('competitest').setup() end
+	}
+	use {
+		'Exafunction/codeium.vim',
+		config = function()
+			-- Change '<C-g>' here to any keycode you like.
+			vim.keymap.set('i', '<C-g>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
+			vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end,
+				{ expr = true, silent = true })
+			vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end,
+				{ expr = true, silent = true })
+			vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
+		end
+	}
 
-        -- optional
-        "nvim-treesitter/nvim-treesitter",
-        "rcarriga/nvim-notify",
-        "nvim-tree/nvim-web-devicons",
-    },
-    opts = {
-        -- configuration goes here
-    },
-		use { 'jonarrien/telescope-cmdline.nvim' },
-		use 'CRAG666/code_runner.nvim',
-		use('jose-elias-alvarez/null-ls.nvim'),
-		use('MunifTanjim/prettier.nvim')
-}
+
+	--- leetcode
+	use {
+		"kawre/leetcode.nvim",
+		build = ":TSUpdate html",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+			"nvim-lua/plenary.nvim", -- required by telescope
+			"MunifTanjim/nui.nvim",
+
+			-- optional
+			"nvim-treesitter/nvim-treesitter",
+			"rcarriga/nvim-notify",
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			-- configuration goes here
+		},
+	}
+	--- end leetcode
+	---
+	use { 'jonarrien/telescope-cmdline.nvim' }
+	use 'CRAG666/code_runner.nvim'
+	use('jose-elias-alvarez/null-ls.nvim')
+	use('MunifTanjim/prettier.nvim')
+	use "olimorris/onedarkpro.nvim"
+	use "folke/tokyonight.nvim"
+	use "rebelot/kanagawa.nvim"
+	use "3rd/image.nvim"
 end)

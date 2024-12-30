@@ -86,7 +86,15 @@ require("nvim-tree").setup({
 		sorter = "case_sensitive",
 	},
 	view = {
-		width = 30,
+		side = "left",
+		preserve_window_proportions = true,
+		width = 25,
+	},
+	update_focused_file = {
+		enable = true,
+		update_root = {
+			enable = true,
+		},
 	},
 	filters = {
 		dotfiles = true,

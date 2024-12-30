@@ -74,4 +74,42 @@ vim.keymap.set('n', '<leader>rft', ':RunFile tab<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
 vim.keymap.set('n', '<leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
 -- vim.keymap.set('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
+--
 -- vim.keymap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })
+
+
+
+-- ## OBSIDIAN ## --
+
+-- Obsidian.nvim keymaps
+-- Place this in your init.lua or in a separate keymaps file
+
+local opts = { noremap = true, silent = true }
+
+-- Basic note operations
+vim.keymap.set('n', '<leader>on', ':ObsidianNew ', opts)          -- Create new note
+vim.keymap.set('n', '<leader>oo', ':ObsidianOpen<CR>', opts)      -- Open note in Obsidian
+vim.keymap.set('n', '<leader>os', ':ObsidianSearch<CR>', opts)    -- Search in vault
+vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', opts) -- Show backlinks
+vim.keymap.set('n', '<leader>ot', ':ObsidianToday<CR>', opts)     -- Open/create daily note
+
+-- Quick note navigation
+vim.keymap.set('n', '<leader>of', ':ObsidianFollowLink<CR>', opts) -- Follow link under cursor
+vim.keymap.set('n', '<leader>ob', ':ObsidianBacklinks<CR>', opts)  -- View backlinks
+vim.keymap.set('n', '<C-p>', ':ObsidianQuickSwitch<CR>', opts)     -- Quick switch between notes
+
+-- Link operations
+vim.keymap.set('n', '<leader>ol', ':ObsidianLink<CR>', opts)    -- Create link
+vim.keymap.set('v', '<leader>ol', ':ObsidianLink<CR>', opts)    -- Create link with selected text
+vim.keymap.set('n', '<leader>oe', ':ObsidianLinkNew<CR>', opts) -- Create and link to new note
+
+-- Workspace operations
+vim.keymap.set('n', '<leader>ow', ':ObsidianWorkspace<CR>', opts) -- Switch workspace
+vim.keymap.set('n', '<leader>or', ':ObsidianRename<CR>', opts)    -- Rename current note
+
+-- Template operations
+vim.keymap.set('n', '<leader>oi', ':ObsidianTemplate<CR>', opts) -- Insert template
+
+-- Tags and metadata
+vim.keymap.set('n', '<leader>oT', ':ObsidianTags<CR>', opts)     -- View all tags
+vim.keymap.set('n', '<leader>om', ':ObsidianMetadata<CR>', opts) -- Edit metadata

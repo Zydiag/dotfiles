@@ -14,10 +14,21 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' state=floating follow=true
 bspc rule -a haruna desktop='^3' state=fullscreen follow=true
 bspc rule -a Chromium desktop='^2'
-bspc rule -a Spotify border=off
+bspc rule -a Thorium-browser desktop='^2'
+bspc rule -a Telegram-desktop desktop="^8"
+bspc rule -a discord desktop="^7" follow=false
+bspc rule -a Spotify desktop="^9"
+
+# bspc rule -a Spotify border=off
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+# custom rules
+bspc rule -a mpv state=floating sticky=on
+bspc rule -a Textsnatcher state=floating sticky=on
+
+
 
 # source the colors.
 . "${HOME}/.cache/wal/colors.sh"
@@ -38,6 +49,7 @@ bspc config presel_feedback_color "$color1"
 setxkbmap -option ctrl:nocaps
 sxhkd &
 xbanish &
+dunst &
 # swww-daemon &
 
 picom --config $HOME/.config/picom/picom.conf &

@@ -62,6 +62,23 @@ ls.add_snippets("sh", {
 	})
 })
 ls.add_snippets("cpp", {
+	s("inc", {
+		t("#include <bits/stdc++.h>"),
+		-- t({ "", "" }),
+		t("using namespace std;"),
+		t({ "", "" }),
+		-- t({ "", "" }),
+		-- t("int main() {"),
+		-- t({ "", "\t" }),
+		-- i(0),
+		-- t({ "", "" }),
+		-- t({ "", "" }),
+		-- t("\treturn 0;"),
+		-- t({ "", "" }),
+		-- t("}"),
+	})
+})
+ls.add_snippets("cpp", {
     s("insta", {
         t("#include <bits/stdc++.h>"),
         t({ "", "" }),

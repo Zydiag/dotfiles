@@ -37,3 +37,4 @@ vim.opt.colorcolumn = "100"
 
 vim.o.pumheight = 10
 
+vim.o.conceallevel = 2
